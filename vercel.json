@@ -1,15 +1,18 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "api/index.php",
-      "use": "@vercel/php"
+    "version": 2,
+    "routes": [
+        { 
+            "src": "/(.*)", 
+            "dest": "/api/index.php",
+            "headers": {
+                "Cache-Control": "public, s-maxage=86400",
+                "Access-Control-Allow-Origin": "*"
+            }
+        }
+    ],
+    "functions": {
+        "api/index.php": {
+            "runtime": "vercel-php@0.6.0"
+        }
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/api/index.php"
-    }
-  ]
 }
