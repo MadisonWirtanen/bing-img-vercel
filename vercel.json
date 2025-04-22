@@ -3,7 +3,7 @@
     "routes": [
         { 
             "src": "/(.*)", 
-            "dest": "/api/index.php",
+            "dest": "/api/$1.php",
             "headers": {
                 "Cache-Control": "public, s-maxage=86400",
                 "Access-Control-Allow-Origin": "*"
