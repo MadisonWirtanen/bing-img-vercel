@@ -2,8 +2,56 @@
     "version": 2,
     "routes": [
         { 
+            "src": "/1080x1920", 
+            "dest": "/api/1080x1920.php",
+            "headers": {
+                "Cache-Control": "public, s-maxage=86400",
+                "Access-Control-Allow-Origin": "*"
+            }
+        },
+        { 
+            "src": "/1080x1920.php", 
+            "dest": "/api/1080x1920.php",
+            "headers": {
+                "Cache-Control": "public, s-maxage=86400",
+                "Access-Control-Allow-Origin": "*"
+            }
+        },
+        { 
+            "src": "/UHD", 
+            "dest": "/api/UHD.php",
+            "headers": {
+                "Cache-Control": "public, s-maxage=86400",
+                "Access-Control-Allow-Origin": "*"
+            }
+        },
+        { 
+            "src": "/UHD.php", 
+            "dest": "/api/UHD.php",
+            "headers": {
+                "Cache-Control": "public, s-maxage=86400",
+                "Access-Control-Allow-Origin": "*"
+            }
+        },
+        { 
+            "src": "/1920x1080", 
+            "dest": "/api/1920x1080.php",
+            "headers": {
+                "Cache-Control": "public, s-maxage=86400",
+                "Access-Control-Allow-Origin": "*"
+            }
+        },
+        { 
+            "src": "/1920x1080.php", 
+            "dest": "/api/1920x1080.php",
+            "headers": {
+                "Cache-Control": "public, s-maxage=86400",
+                "Access-Control-Allow-Origin": "*"
+            }
+        },
+        { 
             "src": "/(.*)", 
-            "dest": "/api/$1.php",
+            "dest": "/api/index.php",
             "headers": {
                 "Cache-Control": "public, s-maxage=86400",
                 "Access-Control-Allow-Origin": "*"
@@ -11,7 +59,16 @@
         }
     ],
     "functions": {
-        "api/(.*\\.php)": {
+        "api/index.php": {
+            "runtime": "vercel-php@0.7.3"
+        },
+        "api/1080x1920.php": {
+            "runtime": "vercel-php@0.7.3"
+        }, 
+        "api/1920x1080.php": {
+            "runtime": "vercel-php@0.7.3"
+        },
+        "api/UHD.php": {
             "runtime": "vercel-php@0.7.3"
         }
     }
