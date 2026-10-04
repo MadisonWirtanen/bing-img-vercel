@@ -5,7 +5,7 @@
             "src": "/1080x1920", 
             "dest": "/api/1080x1920.php",
             "headers": {
-                "Cache-Control": "public, s-maxage=86400",
+                "Cache-Control": "public, max-age=300, s-maxage=21600, stale-while-revalidate=3600",
                 "Access-Control-Allow-Origin": "*"
             }
         },
@@ -13,7 +13,7 @@
             "src": "/1080x1920.php", 
             "dest": "/api/1080x1920.php",
             "headers": {
-                "Cache-Control": "public, s-maxage=86400",
+                "Cache-Control": "public, max-age=300, s-maxage=21600, stale-while-revalidate=3600",
                 "Access-Control-Allow-Origin": "*"
             }
         },
@@ -21,7 +21,7 @@
             "src": "/UHD", 
             "dest": "/api/UHD.php",
             "headers": {
-                "Cache-Control": "public, s-maxage=86400",
+                "Cache-Control": "public, max-age=300, s-maxage=21600, stale-while-revalidate=3600",
                 "Access-Control-Allow-Origin": "*"
             }
         },
@@ -29,7 +29,7 @@
             "src": "/UHD.php", 
             "dest": "/api/UHD.php",
             "headers": {
-                "Cache-Control": "public, s-maxage=86400",
+                "Cache-Control": "public, max-age=300, s-maxage=21600, stale-while-revalidate=3600",
                 "Access-Control-Allow-Origin": "*"
             }
         },
@@ -37,7 +37,7 @@
             "src": "/1920x1080", 
             "dest": "/api/1920x1080.php",
             "headers": {
-                "Cache-Control": "public, s-maxage=86400",
+                "Cache-Control": "public, max-age=300, s-maxage=21600, stale-while-revalidate=3600",
                 "Access-Control-Allow-Origin": "*"
             }
         },
@@ -45,7 +45,7 @@
             "src": "/1920x1080.php", 
             "dest": "/api/1920x1080.php",
             "headers": {
-                "Cache-Control": "public, s-maxage=86400",
+                "Cache-Control": "public, max-age=300, s-maxage=21600, stale-while-revalidate=3600",
                 "Access-Control-Allow-Origin": "*"
             }
         },
@@ -53,7 +53,7 @@
             "src": "/(.*)", 
             "dest": "/api/index.php",
             "headers": {
-                "Cache-Control": "public, s-maxage=86400",
+                "Cache-Control": "public, max-age=300, s-maxage=21600, stale-while-revalidate=3600",
                 "Access-Control-Allow-Origin": "*"
             }
         }
